@@ -3,7 +3,7 @@ function changeText() {
     var number = getRandomNumberBetween(0, textsArray.length - 1);
     console.log("Index: ", number);
     document.getElementById("heading").innerHTML = textsArray[number];
-    //console.log(document.getElementById('headingytt'))
+    //console.log(document.getElementById('heading'))
 }
 function getRandomNumberBetween(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
