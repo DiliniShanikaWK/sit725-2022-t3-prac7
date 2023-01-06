@@ -8,6 +8,39 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
+app.get("/addTwoNumbers/:firstNumber/:secondNumber", function (req, res, next) {
+  var firstNumber = parseInt(req.params.firstNumber);
+  var secondNumber = parseInt(req.params.secondNumber);
+  var result = firstNumber + secondNumber || null;
+  if (result == null) {
+    res.json({ result: result, statusCode: 400 }).status(400);
+  } else {
+    res.json({ result: result, statusCode: 200 }).status(200);
+  }
+});
+
+/*app.get("/addTwoStrings/:firstName/:secondName", function (req, res, next) {
+  var firstName = parseString(req.params.firstName);
+  var secondName = parseString(req.params.secondName);
+  var result = firstName + secondName || null;
+  if (result == null) {
+    res.json({ result: result, statusCode: 400 }).status(400);
+  } else {
+    res.json({ result: result, statusCode: 200 }).status(200);
+  }
+});*/
+
+app.get("/addTwoStrings/:firstName/:secondName", function (req, res, next) {
+  var firstName = req.params.firstName;
+  var secondName = req.params.secondName;
+  var result = firstName + secondName || null;
+  if (result == null) {
+    res.json({ result: result, statusCode: 400 }).status(400);
+  } else {
+    res.json({ result: result, statusCode: 200 }).status(200);
+  }
+});
+
 //mongodb connection
 const MongoClient = require("mongodb").MongoClient;
 const uri =

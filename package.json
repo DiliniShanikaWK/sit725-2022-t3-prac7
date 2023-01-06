@@ -1,14 +1,15 @@
 {
-  "name": "sit725-2022-t3-prac4",
+  "name": "sit725-2022-t3-prac6",
   "version": "1.0.0",
-  "description": "SIT 725 Practical 4",
+  "description": "SIT 725 Practical 6",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DiliniShanikaWK/sit725-2022-t3-prac4.git"
+    "url": "git+https://github.com/DiliniShanikaWK/sit725-2022-t3-prac6.git"
   },
   "keywords": [
     "Express",
@@ -17,12 +18,15 @@
   "author": "Dilini",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DiliniShanikaWK/sit725-2022-t3-prac4/issues"
+    "url": "https://github.com/DiliniShanikaWK/sit725-2022-t3-prac6/issues"
   },
-  "homepage": "https://github.com/DiliniShanikaWK/sit725-2022-t3-prac4#readme",
+  "homepage": "https://github.com/DiliniShanikaWK/sit725-2022-t3-prac6#readme",
   "dependencies": {
+    "chai": "^4.3.7",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mongodb": "^4.12.1"
+    "mocha": "^10.2.0",
+    "mongodb": "^4.12.1",
+    "request": "^2.88.2"
   }
 }
